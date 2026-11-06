@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY worker/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt \
-    && pip uninstall -y torchvision
+    && pip uninstall -y torchvision torchaudio
 
 COPY worker/handler.py .
 
