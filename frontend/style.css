@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+
+#sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#new-model-btn {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#model-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+#model-list li {
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#model-list li:hover {
+  background: #eee;
+}
+
+#model-list li.active {
+  background: #ddeeff;
+  font-weight: 600;
+}
+
+#main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+#empty-state {
+  color: #888;
+}
+
+#reference-img {
+  max-width: 240px;
+  max-height: 240px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+#gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#generate-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#prompt-input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+#status {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+dialog {
+  border-radius: 8px;
+  border: none;
+  padding: 1.5rem;
+}
+
+dialog label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+dialog input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+dialog menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a1a; color: #eee; }
+  #sidebar { border-color: #333; }
+  #model-list li:hover { background: #2a2a2a; }
+  #model-list li.active { background: #2a3a4a; }
+  dialog { background: #222; color: #eee; }
+  #status { color: #aaa; }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Identity Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="sidebar">
+    <button id="new-model-btn">+ New Model</button>
+    <ul id="model-list"></ul>
+  </div>
+  <div id="main">
+    <div id="empty-state">Select or create a model to get started.</div>
+    <div id="model-view" hidden>
+      <h1 id="model-name"></h1>
+      <img id="reference-img" alt="reference">
+      <div id="gallery"></div>
+      <form id="generate-form">
+        <input id="prompt-input" type="text" placeholder="Describe a new scene..." required>
+        <button type="submit">Generate</button>
+      </form>
+      <div id="status"></div>
+    </div>
+  </div>
+
+  <dialog id="new-model-dialog">
+    <form id="new-model-form">
+      <label>Name <input id="new-model-name" required></label>
+      <label>Reference prompt <input id="new-model-prompt" required></label>
+      <menu>
+        <button type="button" id="cancel-new-model">Cancel</button>
+        <button type="submit">Create</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

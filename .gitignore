@@ -3,3 +3,7 @@ data/
 __pycache__/
 *.pyc
 .venv/
+.claude/
+uvicorn.*.log
+smoke_test_output.png
+smoke_test_result.json
