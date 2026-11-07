@@ -1,13 +1,10 @@
 import base64
 import io
-import os
 
 import runpod
 import torch
 from diffusers import Flux2KleinPipeline
 from PIL import Image
-
-os.environ.setdefault("HF_HOME", "/runpod-volume/hf-cache")
 
 pipe = Flux2KleinPipeline.from_pretrained(
     "black-forest-labs/FLUX.2-klein-4B", torch_dtype=torch.bfloat16
